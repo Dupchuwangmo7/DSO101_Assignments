@@ -125,18 +125,18 @@ npm start
 **Backend image:**
 ```bash
 cd backend
-docker build -t dupchuuw/be-todo:02230282 .
-docker push dupchuuw/be-todo:02230282
+docker buildx build --platform linux/amd64 -t dupchuuw/be-todo:02230282 --push .
+
 ```
+
+![alt text](Screenshots/backend_docker_push.png)
 
 **Frontend image:**
 ```bash
 cd frontend
-docker build -t dupchuuw/fe-todo:02230282 .
-docker push dupchuuw/fe-todo:02230282
+docker buildx build --platform linux/amd64 -t dupchuuw/fe-todo:02230282 --push .
 ```
-
-> **Screenshot:** Docker Hub dashboard showing both `dupchuuw/be-todo:02230282` and `dupchuuw/fe-todo:02230282` images
+![alt text](Screenshots/forntend_docker_push.png)
 
 ### Step A2 — Deploy on Render.com
 
