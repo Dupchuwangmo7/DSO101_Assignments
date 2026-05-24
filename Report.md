@@ -134,8 +134,15 @@ Render provides a free-tier cloud platform that integrates directly with GitHub.
 - **Step 1** — Create a Web Service on render.com and connect the GitHub repository.
 - **Step 2** — Set Build Command to: `pip install -r requirements.txt`
 - **Step 3** — Set Start Command to: `python app.py`
+
+![alt text](screenshots/render_deployment.png)
+my app is live now.
+
 - **Step 4** — Copy the Deploy Hook URL from the service's Settings → Deploy Hook.
 - **Step 5** — Add the URL as a GitHub secret named `RENDER_DEPLOY_HOOK`.
+
+![alt text](screenshots/github_s.png)
+
 
 The `render.yaml` file at the root of the repository acts as Infrastructure-as-Code, allowing Render to auto-configure the service on first import.
 
@@ -144,7 +151,7 @@ With this setup, every successful merge to `main` results in:
 - GitHub Actions running all 14 tests
 - On 100% pass rate, the Render deploy hook fires
 - Render pulls the latest code, rebuilds, and restarts the service
-- Live app is available at: `https://<service-name>.onrender.com`
+- Live app is available at: `https://dso101-assignments-yewb.onrender.com/`
 
 ## 7. Conclusion
 
