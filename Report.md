@@ -150,6 +150,8 @@ With this setup, every successful merge to `main` results in:
 
 - GitHub Actions running all 14 tests
 - On 100% pass rate, the Render deploy hook fires
+![alt text](screenshots/ci-cd_pipeline.png)
+
 - Render pulls the latest code, rebuilds, and restarts the service
 - Live app is available at: `https://dso101-assignments-yewb.onrender.com/`
 
